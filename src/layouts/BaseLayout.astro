@@ -1,6 +1,7 @@
 ---
 import { metadata as siteMetadata } from '../data/metadata';
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title: string;
@@ -39,6 +40,7 @@ const fullTitle = `${siteMetadata.name} | ${title}`;
     <link rel="webmention" href="https://webmention.io/blog.nathancheng.work/webmention" />
     <link rel="pingback" href="https://webmention.io/blog.nathancheng.work/xmlrpc" />
     <script is:inline src="/quotebackLite.js"></script>
+    <Analytics />
   </head>
   <body class="text-black dark:text-white selection:bg-emerald-100 dark:selection:bg-emerald-700 min-h-screen">
     <slot />

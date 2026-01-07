@@ -13,6 +13,7 @@
     "@astrojs/rss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
+    "@vercel/analytics": "^1.6.1",
     "astro": "^5.16.7",
     "tailwindcss": "^4.1.18"
   }

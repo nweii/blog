@@ -1,16 +1,21 @@
 ---
+import MainLayout from '../layouts/MainLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { getCollection } from 'astro:content';
 
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.published === true;
+});
+
+const posts = allPosts.sort((a, b) => 
+  b.data.date.getTime() - a.data.date.getTime()
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Blog" description="Thoughts and notes on film, internet, design, and media.">
+  <div class="flex-col">
+    {posts.map((post) => (
+      <PostCard post={post} isFeed={true} />
+    ))}
+  </div>
+</MainLayout>

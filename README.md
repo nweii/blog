@@ -1,43 +1,56 @@
-# Astro Starter Kit: Minimal
+# Nathan Cheng's Blog
 
-```sh
-bun create astro@latest -- --template minimal
-```
+A personal blog and link-log built with [Astro](https://astro.build/) and [Tailwind CSS v4](https://tailwindcss.com/).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Features
 
-## 🚀 Project Structure
+- **Content Collections**: Fully typed content schema for blog posts with support for custom slugs and publication status.
+- **RSS Feed**: Automatically generated feed at `/feed.xml`.
+- **Archives & Tags**: Built-in archival browsing and tag-based filtering.
+- **Tailwind CSS v4**: Modern styling with the latest Tailwind features.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Project Structure
 
 ```text
 /
-├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/     # Astro UI components
+│   ├── content/        # Markdown posts and collection config
+│   ├── data/           # Site-wide metadata and constants
+│   ├── layouts/        # Page templates
+│   ├── pages/          # Routing and page logic
+│   └── styles/         # Global CSS
+├── public/             # Static assets (favicons, etc.)
+└── astro.config.mjs    # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This project uses `bun` for package management.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Commands
 
-## 🧞 Commands
+| Command       | Action                                      |
+| ------------- | ------------------------------------------- |
+| `bun dev`     | Starts local dev server at `localhost:4321` |
+| `bun build`   | Build the production site to `./dist/`      |
+| `bun preview` | Preview the build locally                   |
 
-All commands are run from the root of the project, from a terminal:
+## 📝 Writing Posts
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+Posts are located in `src/content/posts/`. Each post is a Markdown file with the following frontmatter:
 
-## 👀 Want to learn more?
+```markdown
+---
+title: "Post Title"
+slug: "custom-url-slug" # Optional override
+date: 2023-01-01 00:00:00 Z
+description: "Optional short summary"
+published: true
+tags: ["design", "film"]
+---
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📄 License
+
+© {new Date().getFullYear()} Nathan Ch

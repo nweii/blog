@@ -1,0 +1,33 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogType?: string;
+}
+
+const { title, description, ogType } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} ogType={ogType}>
+  <div class="mx-auto w-full md:max-w-7xl mt-5 px-2 ntiny:mt-8 xl:mt-16 ntiny:px-4">
+    <div class="flex">
+      <!-- Content area with two columns -->
+      <div class="flex flex-col w-full gap-8 md:gap-4 md:flex-row px-1 relative">
+        <!-- Sidebar -->
+        <div class="md:w-56 shrink-0">
+          <Nav />
+        </div>
+        <!-- Page area -->
+        <main class="w-full md:w-[70%] md:max-w-screen-md px-2 flex-grow min-h-[70vh] md:min-h-[86vh]">
+          <slot />
+        </main>
+      </div>
+    </div>
+    <!-- Footer -->
+    <Footer />
+  </div>
+</BaseLayout>

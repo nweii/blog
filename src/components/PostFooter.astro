@@ -1,0 +1,44 @@
+---
+import { metadata as siteMetadata } from '../data/metadata';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const postUrl = `/posts/${post.data.slug || post.slug}`;
+const fullUrl = `${siteMetadata.url}${postUrl}`;
+const emailSubject = `RE: [${post.data.title}]`;
+const emailBody = `%0A%0APost%20link%3A%0A${fullUrl}`;
+const emailLink = `mailto:${siteMetadata.email}?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
+const tags = post.data.tags.filter(tag => tag !== 'posts');
+---
+
+<div id="postFooter" class="mt-12">
+  <ul class="text-sm text-stone-500 dark:text-stone-50/80 font-normal mt-4 underline-offset-2 flex flex-row gap-2">
+    <li>
+      <a href={postUrl}>
+        <u>Link to this post</u>
+      </a>
+    </li>
+    <li>•</li>
+    <li>
+      <a href={emailLink}>
+        <u>Reply</u>
+      </a>
+    </li>
+  </ul>
+  {tags.length > 0 && (
+    <div id="postTags" class="mt-4 text-sm text-stone-500 dark:text-stone-50/80">
+      <em>More posts tagged:</em>
+      <div class="mt-2">
+        {tags.map((tag) => (
+          <a href={`/tags/${tag}`}>
+            <span class="post-tag">{tag}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+</div>

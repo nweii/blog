@@ -1,0 +1,9 @@
+.header-anchor {
+  text-decoration: none!important;
+}
+
+h1 > a.header-anchor {
+}
+
+h2 > a.header-anchor {
+}

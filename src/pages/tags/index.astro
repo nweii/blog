@@ -1,0 +1,30 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.published === true;
+});
+
+const tagsSet = new Set<string>();
+allPosts.forEach((post) => {
+  post.data.tags.forEach((tag) => {
+    if (tag !== 'posts') {
+      tagsSet.add(tag);
+    }
+  });
+});
+
+const tags = Array.from(tagsSet).sort();
+---
+
+<MainLayout title="Tags" description="All blog post tags">
+  <h1 class="post-title mb-8">Tags</h1>
+  <div class="flex flex-wrap gap-2">
+    {tags.map((tag) => (
+      <a href={`/tags/${tag}`} class="post-tag">
+        {tag}
+      </a>
+    ))}
+  </div>
+</MainLayout>

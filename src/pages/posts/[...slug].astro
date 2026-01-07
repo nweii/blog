@@ -1,0 +1,30 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => {
+    return data.published === true;
+  });
+  
+  return posts.map((post) => ({
+    params: { slug: post.data.slug || post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: Awaited<ReturnType<typeof getCollection<'posts'>>>[number];
+}
+
+const { post } = Astro.props;
+---
+
+<MainLayout 
+  title={post.data.title} 
+  description={post.data.description || post.data.title}
+  ogType="article"
+>
+  <PostCard post={post} isFeed={false} />
+</MainLayout>

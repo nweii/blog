@@ -1,0 +1,51 @@
+---
+import { metadata } from '../data/metadata';
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => currentPath === path || (path !== '/' && currentPath.startsWith(path));
+---
+
+<footer class="px-2 mt-9 flex flex-col gap-8 md:gap-4 md:flex-row">
+  <div class="hidden md:block md:w-56 shrink-0"></div>
+  <div class="px-2 pb-9 w-full md:w-[70%] grow md:max-w-screen-md flex flex-row gap-4 justify-between items-end">
+    <div class="flex flex-col grow space-y-4">
+      <ul class="md:hidden text-sm text-stone-500 dark:text-stone-50/80 font-medium flex flex-wrap gap-y-2 gap-5 overflow-auto">
+        <li class={isActive('/') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+          <a href="/">Recent</a>
+        </li>
+        <li class={isActive('/archive') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+          <a href="/archive">Archive</a>
+        </li>
+        <li class={isActive('/about') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+          <a href="/about">About</a>
+        </li>
+        <li class={isActive('/tags') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+          <a href="/tags">Tags</a>
+        </li>
+        <li class="link-hover">
+          <a href="https://nathancheng.fyi" target="_blank">Notes<sup class="opacity-75">↗</sup></a>
+        </li>
+        <li class="link-hover">
+          <a href={metadata.portfolio} target="_blank">Work<sup class="opacity-75">↗</sup></a>
+        </li>
+      </ul>
+      <ul class="font-medium text-sm text-stone-500 dark:text-stone-50/80 flex flex-row flex-wrap gap-4 gap-y-1">
+        <li class="link-hover">
+          <a href={`mailto:${metadata.email}`} target="_blank" rel="me">Email</a>
+        </li>
+        <li class="link-hover">
+          <a href={metadata.portfolio} target="_blank">Work</a>
+        </li>
+        <li class="link-hover">
+          <a href={metadata.linkedin} target="_blank">LinkedIn</a>
+        </li>
+        <li class="link-hover">
+          <a href="/feed.xml" target="_blank">RSS</a>
+        </li>
+      </ul>
+      <p class="text-sm text-stone-500 dark:text-stone-50/80">
+        © {new Date().getFullYear()} Nathan Cheng unless noted otherwise.
+      </p>
+    </div>
+    <img src="/assets/img/favicon/favicon.svg" width="42" height="42" alt="Nathan Cheng" class="opacity-70 dark:invert dark:opacity-80" />
+  </div>
+</footer>

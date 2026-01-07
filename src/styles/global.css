@@ -130,7 +130,7 @@ figcaption {
   prose-h2:mb-2 prose-img:rounded-md
   prose-img:shadow prose-ul:list-outside 
   prose-blockquote:not-italic prose-blockquote:font-normal
-  prose-blockquote:border-l-[1px] leading-relaxed;
+  prose-blockquote:border-l leading-relaxed;
   max-width: none;
 }
 

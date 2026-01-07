@@ -10,7 +10,7 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
   <p class="mb-5 text-sm font-normal text-stone-500 dark:text-stone-50/80">
     Thoughts and quotes re: film, internet, design, and media.
   </p>
-  <ul class="text-sm text-stone-500 dark:text-stone-50/80 font-medium flex flex-nowrap overflow-x-auto gap-y-2 gap-5 md:grid md:gap-2 mb-5">
+  <ul class="text-sm text-stone-500 dark:text-stone-50/80 font-medium flex flex-wrap gap-y-2 gap-5 md:grid md:gap-2 mb-5">
     <li class={isActive('/') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
       <a href="/">Recent</a>
     </li>

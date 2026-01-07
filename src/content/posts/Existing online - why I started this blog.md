@@ -3,9 +3,10 @@ title: Why I started this blog
 date: 2023-02-14 00:00:00 Z
 description: On posting online and finding a more earnest way to write.
 tags:
-- writing
-- platforms
-- personal
+  - writing
+  - platforms
+  - personal
+published: false
 ---
 
 I originally planned to post here twice a month, but that didn't happen. A few reasons why:

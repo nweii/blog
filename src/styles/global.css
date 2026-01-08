@@ -39,7 +39,7 @@ html {
   --typography-default-quote-borders-color: #d6d3d1;
   --typography-default-th-borders-color: #d6d3d1;
 
-  --gradient: linear-gradient(to bottom, var(--color-stone-50), #f7f3e5);
+  --gradient: linear-gradient(to bottom, var(--color-stone-50), #fffae7);
   --gradient-dark: linear-gradient(to bottom, var(--color-stone-900), var(--color-stone-800));
 
   --bg-solid: var(--color-stone-50);

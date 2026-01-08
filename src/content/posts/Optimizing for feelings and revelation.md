@@ -9,6 +9,8 @@ tags:
   - film
   - processes
   - business
+aliases:
+  - "Optimizing for feelings"
 ---
 
 [The Browser Company on “Emotional Design”](https://browsercompany.substack.com/p/optimizing-for-feelings):

@@ -2,29 +2,57 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
+import { slugify } from '../../utils/slugify';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data, filePath }) => {
     return data.published === true && !filePath?.includes('/private/');
   });
   
-  return posts.map((post) => ({
-    params: { slug: post.data.slug || post.slug },
-    props: { post },
-  }));
+  const routes = [];
+  
+  for (const post of posts) {
+    const canonicalSlug = post.data.slug || post.slug;
+    
+    // Canonical route
+    routes.push({
+      params: { slug: canonicalSlug },
+      props: { post, isRedirect: false },
+    });
+    
+    // Alias redirect routes
+    for (const alias of post.data.aliases) {
+      const aliasSlug = slugify(alias);
+      // Skip if alias resolves to canonical slug
+      if (aliasSlug !== canonicalSlug) {
+        routes.push({
+          params: { slug: aliasSlug },
+          props: { post: null, isRedirect: true, redirectTo: `/posts/${canonicalSlug}` },
+        });
+      }
+    }
+  }
+  
+  return routes;
 }
 
 interface Props {
-  post: Awaited<ReturnType<typeof getCollection<'posts'>>>[number];
+  post: Awaited<ReturnType<typeof getCollection<'posts'>>>[number] | null;
+  isRedirect: boolean;
+  redirectTo?: string;
 }
 
-const { post } = Astro.props;
+const { post, isRedirect, redirectTo } = Astro.props;
+
+if (isRedirect && redirectTo) {
+  return Astro.redirect(redirectTo, 301);
+}
 ---
 
 <MainLayout 
-  title={post.data.title} 
-  description={post.data.description || post.data.title}
+  title={post!.data.title} 
+  description={post!.data.description || post!.data.title}
   ogType="article"
 >
-  <PostCard post={post} isFeed={false} />
+  <PostCard post={post!} isFeed={false} />
 </MainLayout>

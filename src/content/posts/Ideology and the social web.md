@@ -1,5 +1,8 @@
 ---
-title: The ideology of the social web
+title: Social media ideology
+aliases:
+  - "The ideology of the social web"
+  - "Ideology and the social web"
 date: 2022-08-04 00:00:00 Z
 description: How social media design conventions like engagement metrics and personalization came to be assumed as standard.
 tags:

@@ -8,11 +8,14 @@ This is a personal blog built with Astro 5 and Tailwind CSS v4. Posts are writte
 
 ## Development Commands
 
-This project uses **bun** as the package manager:
+This project uses **bun** as the package manager (**not npm or yarn**):
 
 - `bun dev` - Start development server at localhost:4321
 - `bun build` - Build for production to `./dist/`
 - `bun preview` - Preview production build locally
+- `bun add` - Add dependencies
+- `bun remove` - Remove dependencies
+- `bun run` - Run scripts defined in `package.json`
 
 ## Architecture
 

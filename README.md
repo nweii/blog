@@ -58,3 +58,9 @@ tags: ["design", "film"]
 ## Changelog
 
 Technical updates to this blog are documented in [CHANGELOG.md](./CHANGELOG.md).
+
+## License
+
+The code in this repository is licensed under the [MIT License](./LICENSE).
+
+Blog content (posts, essays, and other written material in `src/content/`) is © Nathan Cheng and is not licensed for reproduction without permission.

@@ -23,11 +23,13 @@ This project uses **bun** as the package manager (**not npm or yarn**):
 
 Posts live in `src/content/posts/` as Markdown files. The content schema is defined in `src/content/config.ts` with these fields:
 - `title` (required)
-- `date` (required, coerced to Date)
-- `description` (optional)
-- `published` (boolean, defaults to true)
-- `tags` (array of strings, defaults to [])
+- `aliases` (array of strings, defaults to []) - alternative URLs that redirect to the canonical post
 - `slug` (optional override for URL)
+- `description` (optional)
+- `date` (required, coerced to Date, supports `YYYY-MM-DDTHH:mm` format)
+- `published` (boolean, defaults to true)
+- `modified` (optional, coerced to Date)
+- `tags` (array of strings, defaults to [])
 
 **Private Posts**: Posts in `src/content/posts/private/` are automatically excluded from builds, RSS feeds, and tag pages via a `!filePath?.includes('/private/')` filter applied consistently across:
 - `src/pages/posts/[...slug].astro` (getStaticPaths)

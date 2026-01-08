@@ -30,11 +30,13 @@ This project uses `bun` for package management.
 
 ### Commands
 
+
 | Command       | Action                                      |
 | ------------- | ------------------------------------------- |
 | `bun dev`     | Starts local dev server at `localhost:4321` |
 | `bun build`   | Build the production site to `./dist/`      |
 | `bun preview` | Preview the build locally                   |
+
 
 ## 📝 Writing Posts
 
@@ -51,6 +53,3 @@ tags: ["design", "film"]
 ---
 ```
 
-## 📄 License
-
-© {new Date().getFullYear()} Nathan Ch

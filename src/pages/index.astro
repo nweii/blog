@@ -3,8 +3,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('posts', ({ data }) => {
-  return data.published === true;
+const allPosts = await getCollection('posts', ({ data, filePath }) => {
+  return data.published === true && !filePath?.includes('/private/');
 });
 
 const posts = allPosts.sort((a, b) => 

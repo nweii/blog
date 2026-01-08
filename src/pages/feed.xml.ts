@@ -3,8 +3,8 @@ import { getCollection } from "astro:content";
 import { metadata as siteMetadata } from "../data/metadata";
 
 export async function GET() {
-  const posts = await getCollection("posts", ({ data }) => {
-    return data.published === true;
+  const posts = await getCollection("posts", ({ data, filePath }) => {
+    return data.published === true && !filePath?.includes('/private/');
   });
 
   const sortedPosts = posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());

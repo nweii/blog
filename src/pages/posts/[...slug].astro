@@ -4,8 +4,8 @@ import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts', ({ data }) => {
-    return data.published === true;
+  const posts = await getCollection('posts', ({ data, filePath }) => {
+    return data.published === true && !filePath?.includes('/private/');
   });
   
   return posts.map((post) => ({

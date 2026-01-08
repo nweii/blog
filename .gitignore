@@ -26,3 +26,6 @@ pnpm-debug.log*
 # other
 notes/
 .obsidian/
+
+# private posts (unpublished)
+src/content/posts/private/

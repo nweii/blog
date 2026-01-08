@@ -14,7 +14,7 @@ const fullTitle = `${siteMetadata.name} | ${title}`;
 ---
 
 <!doctype html>
-<html lang="en" class="bg-stone-50 dark:bg-stone-900 bg-noiseWithGradient dark:[--gradient:var(--gradient-dark)] min-h-screen">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -42,7 +42,7 @@ const fullTitle = `${siteMetadata.name} | ${title}`;
     <script is:inline src="/quotebackLite.js"></script>
     <Analytics />
   </head>
-  <body class="text-black dark:text-white selection:bg-emerald-100 dark:selection:bg-emerald-700 min-h-screen">
+  <body class="bg-stone-50 dark:bg-stone-900 bg-noiseWithGradient text-black dark:text-white selection:bg-emerald-100 dark:selection:bg-emerald-700 min-h-screen">
     <slot />
   </body>
 </html>

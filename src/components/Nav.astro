@@ -11,16 +11,16 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
     Thoughts and quotes re: film, internet, design, and media.
   </p>
   <ul class="text-sm text-stone-500 dark:text-stone-50/80 font-medium flex flex-wrap gap-y-2 gap-5 md:grid md:gap-2 mb-5">
-    <li class={isActive('/') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+    <li class={isActive('/') ? 'opacity-50' : 'link-hover'}>
       <a href="/">Recent</a>
     </li>
-    <li class={isActive('/archive') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+    <li class={isActive('/archive') ? 'opacity-50' : 'link-hover'}>
       <a href="/archive">Archive</a>
     </li>
-    <li class={isActive('/about') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+    <li class={isActive('/about') ? 'opacity-50' : 'link-hover'}>
       <a href="/about">About</a>
     </li>
-    <li class={isActive('/tags') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+    <li class={isActive('/tags') ? 'opacity-50' : 'link-hover'}>
       <a href="/tags">Tags</a>
     </li>
     <li class="link-hover">

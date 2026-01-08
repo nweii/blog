@@ -45,11 +45,16 @@ Posts are located in `src/content/posts/`. Each post is a Markdown file with the
 ```markdown
 ---
 title: "Post Title"
-slug: "custom-url-slug" # Optional override
-date: 2023-01-01 00:00:00 Z
+aliases: ["Old Post Title", "Alternate Name"]  # Optional redirects (auto-slugified)
+slug: "custom-url-slug"                  # Optional URL override
 description: "Optional short summary"
+date: 2024-01-15T12:00
 published: true
+modified: 2024-02-20T09:30               # Optional last-modified date
 tags: ["design", "film"]
 ---
 ```
 
+## 📋 Changelog
+
+Technical updates to this blog are documented in [CHANGELOG.md](./CHANGELOG.md).

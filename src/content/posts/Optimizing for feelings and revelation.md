@@ -1,16 +1,16 @@
 ---
 title: Designing for feelings and revelation
+aliases:
+  - "Optimizing for feelings"
 date: 2022-08-23T00:00
-modified: 2026-01-08T10:03
-description: Efficiency and metrics are easy to measure, but they leave out the qualities that make software actually feel human.
 published: true
+description: Efficiency and metrics are easy to measure, but they leave out the qualities that make software actually feel human.
 tags:
   - design
   - film
   - processes
   - business
-aliases:
-  - "Optimizing for feelings"
+modified: 2026-01-08T10:03
 ---
 
 [The Browser Company on “Emotional Design”](https://browsercompany.substack.com/p/optimizing-for-feelings):

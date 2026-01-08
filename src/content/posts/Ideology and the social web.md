@@ -1,7 +1,7 @@
 ---
 title: The ideology of the social web
 date: 2022-08-04 00:00:00 Z
-description: Social media isn't just a set of tools; it's a set of rules for how to exist.
+description: How social media design conventions like engagement metrics and personalization came to be assumed as standard.
 tags:
 - platforms
 - tech

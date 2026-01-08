@@ -23,5 +23,3 @@ Fan-made "Wikis" (usually on Fandom.com) lack Wikipedia’s strict objectivity, 
 <blockquote class="quoteback" darkmode="" data-title="Wikipedia%20Is%20the%20Last%20Best%20Place%20on%20the%20Internet" data-author="Richard Cook @WIRED" cite="https://www.wired.com/story/wikipedia-online-encyclopedia-best-place-internet/">
 […] Wikipedia is built on the personal interests and idiosyncrasies of its contributors... Editors' passions can drive the site deep into inconsequential territory—exhaustive detailing of dozens of different kinds of embroidery software... a brief but moving biographical sketch of Khanzir, the only pig in Afghanistan.
 </blockquote>
-
-It's a rare public interaction model that actually seems to work.

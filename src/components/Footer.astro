@@ -1,5 +1,6 @@
 ---
 import { metadata } from '../data/metadata';
+import Monomark from './Monomark.astro';
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => currentPath === path || (path !== '/' && currentPath.startsWith(path));
 ---
@@ -9,16 +10,16 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
   <div class="px-2 pb-9 w-full md:w-[70%] grow md:max-w-screen-md flex flex-row gap-4 justify-between items-end">
     <div class="flex flex-col grow space-y-4">
       <ul class="md:hidden text-sm text-stone-500 dark:text-stone-50/80 font-medium flex flex-wrap gap-y-2 gap-5">
-        <li class={isActive('/') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+        <li class={isActive('/') ? 'opacity-50' : 'link-hover'}>
           <a href="/">Recent</a>
         </li>
-        <li class={isActive('/archive') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+        <li class={isActive('/archive') ? 'opacity-50' : 'link-hover'}>
           <a href="/archive">Archive</a>
         </li>
-        <li class={isActive('/about') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+        <li class={isActive('/about') ? 'opacity-50' : 'link-hover'}>
           <a href="/about">About</a>
         </li>
-        <li class={isActive('/tags') ? 'opacity-50 hover:translate-y-0' : 'link-hover'}>
+        <li class={isActive('/tags') ? 'opacity-50' : 'link-hover'}>
           <a href="/tags">Tags</a>
         </li>
         <li class="link-hover">
@@ -42,10 +43,10 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
           <a href="/feed.xml" target="_blank">RSS</a>
         </li>
       </ul>
-      <p class="text-sm text-stone-500 dark:text-stone-50/50">
+      <p class="text-sm text-stone-900/50 dark:text-stone-50/50">
         © {new Date().getFullYear()} Nathan Cheng unless noted otherwise.
       </p>
     </div>
-    <img src="/assets/img/favicon/favicon.svg" width="42" height="42" alt="Nathan Cheng" class="opacity-70 dark:opacity-80" />
+    <Monomark class="w-10.5 h-10.5 opacity-70 text-stone-700 dark:text-stone-100 dark:opacity-80" aria-label="Nathan Cheng" />
   </div>
 </footer>

@@ -2,14 +2,14 @@
 
 A personal blog and link-log built with [Astro](https://astro.build/) and [Tailwind CSS v4](https://tailwindcss.com/).
 
-## 🚀 Features
+## Features
 
 - **Content Collections**: Fully typed content schema for blog posts with support for custom slugs and publication status.
 - **RSS Feed**: Automatically generated feed at `/feed.xml`.
 - **Archives & Tags**: Built-in archival browsing and tag-based filtering.
 - **Tailwind CSS v4**: Modern styling with the latest Tailwind features.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 /
@@ -24,7 +24,7 @@ A personal blog and link-log built with [Astro](https://astro.build/) and [Tailw
 └── astro.config.mjs    # Astro configuration
 ```
 
-## 🛠️ Development
+## Development
 
 This project uses `bun` for package management.
 
@@ -38,7 +38,7 @@ This project uses `bun` for package management.
 | `bun preview` | Preview the build locally                   |
 
 
-## 📝 Writing Posts
+## Writing Posts
 
 Posts are located in `src/content/posts/`. Each post is a Markdown file with the following frontmatter:
 
@@ -55,6 +55,6 @@ tags: ["design", "film"]
 ---
 ```
 
-## 📋 Changelog
+## Changelog
 
 Technical updates to this blog are documented in [CHANGELOG.md](./CHANGELOG.md).

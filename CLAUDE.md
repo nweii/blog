@@ -37,6 +37,14 @@ Posts live in `src/content/posts/` as Markdown files. The content schema is defi
 - `src/pages/tags/[tag].astro` (tag filtering)
 - All other public post queries
 
+- All other public post queries
+
+### Markdown & Serialization
+
+The blog uses several Remark plugins to enhance the authoring experience:
+- `remark-directive`: Enables the `:::directive` syntax.
+- `remark-quoteback`: (Custom) Transforms `:::quote{url="..." author="..." title="..."}` blocks into standard Quoteback-styled `<blockquote>` elements during build. This maintains graceful degradation while providing a mobile-friendly authoring experience.
+
 ### Routing & Pages
 
 Dynamic routes use Astro's `getStaticPaths()`:

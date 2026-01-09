@@ -11,7 +11,7 @@ Update the project's CHANGELOG.md file with a new entry.
 - `<message>`: Description of the change
 
 ## Examples:
-- `/add-to-changelog 1.1.0 added "New markdown to BlockDoc conversion feature"`
+- `/add-to-changelog 2.1.0 added "Mobile-friendly Quoteback shorthand syntax (:::quote)"`
 - `/add-to-changelog 1.0.2 fixed "Bug in HTML renderer causing incorrect output"`
 
 ## Steps:

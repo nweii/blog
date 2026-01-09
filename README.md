@@ -7,6 +7,7 @@ A personal blog and link-log built with [Astro](https://astro.build/) and [Tailw
 - **Content Collections**: Fully typed content schema for blog posts with support for custom slugs and publication status.
 - **RSS Feed**: Automatically generated feed at `/feed.xml`.
 - **Archives & Tags**: Built-in archival browsing and tag-based filtering.
+- **Quotebacks**: Shorthand `:::quote` syntax for elegant, mobile-friendly blockquotes.
 - **Tailwind CSS v4**: Modern styling with the latest Tailwind features.
 
 ## Project Structure
@@ -54,6 +55,19 @@ modified: 2024-02-20T09:30               # Optional last-modified date
 tags: ["design", "film"]
 ---
 ```
+
+### Quotebacks
+
+For elegant blockquotes with source metadata, use the `:::quote` shorthand. This is especially useful for mobile authoring:
+
+```markdown
+:::quote{url="https://example.com" author="Author Name" title="Article Title"}
+The quote text goes here.
+:::
+```
+
+This transforms into the full [Quoteback](https://quotebacks.net/) HTML during build.
+
 
 ## Changelog
 

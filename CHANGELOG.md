@@ -4,6 +4,12 @@ All notable technical changes to this blog will be documented here. Content upda
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [2.1.0] - 2026-01-09
+
+### Added
+
+- **Shorthand Syntax**: Added mobile-friendly Quoteback shorthand syntax (`:::quote`) via a new Remark plugin.
+
 ## [2.0.0] - 2026-01-08
 
 Complete rebuild of the blog, migrating from an Eleventy-based site to Astro.

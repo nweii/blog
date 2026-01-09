@@ -2,12 +2,17 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
+import remarkDirective from "remark-directive";
+import remarkQuoteback from "./src/plugins/remark-quoteback.mjs";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
+  },
+  markdown: {
+    remarkPlugins: [remarkDirective, remarkQuoteback],
   },
   redirects: {
     "/2022/08/a-love-letter-to-wikipedia": "/posts/a-love-letter-to-wikipedia",

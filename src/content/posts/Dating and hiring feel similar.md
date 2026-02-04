@@ -20,7 +20,7 @@ After qualifications and criteria are cleared, any matching decision ultimately 
 
 AI matching using sophisticated [vector embeddings](https://medium.com/kx-systems/vector-embedding-101-the-new-building-blocks-for-generative-ai-a5f598a806ba) holds some promise, but it risks being a more complex form of shape-fitting; you'd plug in keywords, and the system finds things _closer_ to those keywords. A more novel direction might bypass the keyword step entirely: matching signal to signal, letting the fuzzy things find each other directly without forcing them through structured descriptions first. A better north star might be [curiosity-driven connection](https://nathancheng.fyi/02-Evergreen/Curiosity-driven+connection+supports+emergent+fit+over+pre-defined+criteria) rather than just "better matching" (finding the shape faster). Instead of assuming the seeker knows exactly what they want, a more curiosity-driven system would allow for emergent fit, acknowledging that:
 
-- We tend to think of shapes first, then look for people to match them.Shapes are lossy at best and reductive at worst.
+- We tend to think of shapes first, then look for people to match them. Shapes are lossy at best and reductive at worst.
 - The "perfect match" can change your understanding of what you needed in the first place. Discovery can shift criteria.
 - Moving toward signal-based matching also shifts incentives away from pressuring people to fit themselves into static shapes.
 

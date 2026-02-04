@@ -33,6 +33,10 @@ const fullTitle = `${siteMetadata.name} | ${title}`;
     <meta property="og:type" content={ogType} />
     <meta name="theme-color" content="#f5f5f4" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#211F1D" media="(prefers-color-scheme: dark)" />
+    <!-- Preload heading fonts to reduce FOUT -->
+    <link rel="preload" href="/fonts/nsDt Bld Ext.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/nsDt Rg Ext.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/nsDt Lt Ext.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
     <link rel="apple-touch-icon" href="/assets/img/favicon/favicon.svg" />
     <link rel="manifest" href="/manifest.json" />
